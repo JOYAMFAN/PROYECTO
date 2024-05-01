@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redireccionamiento a WhatsApp</title>
+    <!-- Agrega un favicon -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <!-- Agrega estilos CSS personalizados si es necesario -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .whatsapp-logo {
+            width: 100px; /* Ajusta el tamaño según tus necesidades */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Agrega tu logotipo de WhatsApp -->
+    <img src="assets/logowhatsapp.png" alt="WhatsApp Logo" class="whatsapp-logo">
+    <h1>Redireccionando a WhatsApp...</h1>
+    <!-- Script para redireccionar a WhatsApp -->
+    <script>
+        setTimeout(function() {
+            window.location.href = "https://api.whatsapp.com/send?phone=522461916288";
+        }, 3000); // Cambia 3000 por el tiempo en milisegundos que desees esperar antes de redireccionar
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?php
+include("conectar_bd2.php");
+$ID = $_POST['ID'];
+$CURP = $_POST['CURP'];
+$CORREO = $_POST['CORREO'];
+$NO_TELEFONO = $_POST['NO_TELEFONO'];
+$FECHA_NACIMIENTPO = $_POST['FECHA_NACIMIENTO'];
+$DOMICILIO = $_POST['DOMICILIO'];
+$SEMESTRE = $_POST['SEMESTRE'];
+$CARRERA = $_POST['CARRERA'];
+
+$sql="UPDATE datos SET ID='$ID',CURP='$CURP',CORREO='$CORREO',NO_TELEFONO='$NO_TELEFONO',FECHA_NACIMIENTO='$FECHA_NACIMIENTO',DOMICILIO='$DOMICILIO', SEMESTRE='$SEMESTRE',CARRERA='$CARRERA'WHERE ID='$ID'";
+$query=mysqli_query($conexion,$sql);
+if($query){
+    Header("Location: datos.php");
+}
+?>
