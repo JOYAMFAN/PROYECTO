@@ -9,7 +9,10 @@ $DOMICILIO= $_POST['DOMICILIO'];
 $SEMESTRE= $_POST['SEMESTRE'];
 $CARRERA= $_POST['CARRERA'];
 
-
+if(empty($CORREO))
+{
+    ECHO "Ingresa tu correo";
+}
 $sql="INSERT INTO datos VALUES('$ID','$CURP','$CORREO','$NO_TELEFONO','$FECHA_NACIMIENTO','$DOMICILIO','$SEMESTRE','$CARRERA')";
 $query = mysqli_query($conexion,$sql);
 
